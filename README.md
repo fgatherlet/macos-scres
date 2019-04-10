@@ -14,9 +14,6 @@ Tested with Swift 3.0, Xcode 8.0, OS X Sierra 10.12.1 (16B2555), Retina MacBook 
 ```bash
 # List all mode for Display 0
 ./scres.swift -m 0
-
-# if only one display is attached
-./scres.swift -m
 ```
 
 ### Set display resolution for a certain display

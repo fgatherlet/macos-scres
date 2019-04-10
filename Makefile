@@ -1,14 +1,16 @@
-SRC = scres.swift
+CFLAGS=-framework ApplicationServices
+OBJ=scres
+SRC=$(OBJ).swift
 
-BIN = swiftc
+default: $(OBJ)
 
-OUTPUT = scres
 
-FLAGS= -O -o
+$(OBJ): $(SRC)
+	xcrun --sdk macosx swiftc $<
 
-default:
-	$(BIN) $(FLAGS) $(OUTPUT) $(SRC)
+clean: $(OBJ)
+	rm $<
 
-clean:
-	rm $(OUTPUT)
+.PHONY: default
+
 
